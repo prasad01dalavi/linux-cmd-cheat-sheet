@@ -15,7 +15,8 @@ mkdir -p test_dir/{"a","b","c","d"}                                     # create
 ls ~/.ssh/id_*                                                          # check existing ssh key
 ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"                    # Generate ssh key
 
-sudo find / -iname <file or dir name>                                # find the location of file or dir
+sudo find / -iname <file or dir name>                                   # find the location of file or dir
+du -shc *                                                               # List the files with size
 
 
 
