@@ -18,6 +18,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"                    # Genera
 sudo find / -iname <file or dir name>                                   # find the location of file or dir
 du -shc *                                                               # List the files with size
 
+grep "model name" /proc/cpuinfo | wc -l                                 # Number of CPUs available
 
 
 
