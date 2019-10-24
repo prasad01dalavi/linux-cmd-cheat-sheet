@@ -12,6 +12,8 @@ rename 's/test_//g' *                                                   # rename
 sudo fuser -k port_number/tcp                                           # Kill already running port    
 mkdir -p test_dir/{"a","b","c","d"}                                     # create nested directories
 
+ssh-keygen -t rsa                                                       # generate ssh private and public key
+ssh-copy-id username@ip_address                                         # copy public key to the ip_address host (to access it)
 ls ~/.ssh/id_*                                                          # check existing ssh key
 ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"                    # Generate ssh key
 
