@@ -23,6 +23,32 @@ du -shc *                                                               # List t
 grep "model name" /proc/cpuinfo | wc -l                                 # Number of CPUs available
 
 
+# My Terminal Configuration:
+1. .bashrc file
+orange=$(tput setaf 166);
+yellow=$(tput setaf 228);
+green=$(tput setaf 71);
+white=$(tput setaf 15);
+bold=$(tput bold);
+reset=$(tput sgr0);
 
+PS1="\[${bold}\]\n";
+PS1+="\[${orange}\]\u";   # username
+PS1+="\[${white}\] at ";
+PS1+="\[${yellow}\]\h";   # host
+PS1+="\[${white}\] in ";
+PS1+="\[${green}\]\W";     # working directory
+PS1+="\n";
+PS1+="\[${white}\]\$ \[${reset}\]";    # $ and reset color
+export PS1;
+
+2. .bash_profile file
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+echo 'FROM BASH_PROFILE'
+
+if [ -f ~/.bashrc ]; then 
+    source ~/.bashrc
+fi
 
 ```
