@@ -7,6 +7,7 @@ scp -v <file_name.extension> username@ip_address:                       # -v is 
 scp -v -r <folder_name> username@ip_address:                            # -r is recursively (complete) folder
 scp remote_username@remote_ip:/remote/file /local/file                  # Copy data from remote machine to local machine
 scp -v -i <key.pem> -r <folder_name> ec2_username@public_ip_address:    # copy dir to ec2 linux machine
+scp -i <ssh pvt key> file/dir remote_user@ip_address:                   # Copy files from local system to gcp vm
 
 rename 's/test_//g' *                                                   # rename by removing the test_ at the start of all  
 sudo fuser -k port_number/tcp                                           # Kill already running port    
